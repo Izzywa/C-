@@ -171,4 +171,25 @@ classes have their own associated conventions
     - boundaries visible and readable
 - line up the code block symbols under the keyword they belong to
     - easy to understand where the code block begins and ends
-    
+
+### readability of single-line from if statements
+```
+if (flag) Console.WriteLine(flag);
+```
+conventions:
+- never use single line form
+- using braces is always accepted
+    - required if 
+        - any block in `if/else if/ else` compoind statement use braces
+        - single statement body spans multiple lines
+- braces may be omitted only if the body of every block associated with the `if/ else if/ else` statement is placed on a single line
+
+## switch
+- best used when have a single value that you want to match against many possible values.
+- for any given match, you need to execute a couple of lines of code at most.
+
+## do-while and while loop
+`do-while` ensures that the loop will iterate at least once
+- might continue to iterate based on a boolean expression
+
+`while` statement evaluates a boolean expression first

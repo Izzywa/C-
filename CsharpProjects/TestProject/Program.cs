@@ -169,4 +169,127 @@ foreach (var student in students)
 }
 
 Console.WriteLine("\nPress the Enter key to continue");
+
+Random random = new();
+Console.WriteLine((random.Next(0,2) == 0) ? "Heads" : "Tails");
+
+string permission = "Manager";
+int level = 19;
+
+if (permission.Contains("Admin"))
+{
+    Console.WriteLine($"Welcome, {(level > 55 ? "Super Admin" : "Admin")} user.");
+}
+else if (permission.Contains("Manager") && level >= 20)
+{
+    Console.WriteLine("Contact and Admin for access.");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
+
+int[] numbers = [4, 8, 15, 16, 23, 42];
+int total = 0;
+bool found = false;
+
+foreach (int number in numbers)
+{
+    total += number;
+
+    if (number == 42)
+        found = true;
+}
+
+if (found) 
+    Console.WriteLine("Set contains 42");
+
+
+
+Console.WriteLine($"Total: {total}");
+
+int employmentLevel = 200;
+string employeeName = "John Doe";
+
+string title = "";
+
+title = employmentLevel switch
+{
+    > 300 or > 200 => "Senior Associate",
+    _ => "Junior Associate",
+};
+
+Console.WriteLine($"{employeeName}, {title}");
+
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = product[0] switch
+{
+    "01" => "Sweat shirt",
+    "02" => "T-Shirt",
+    "03" => "Sweat pants",
+    _ => "Other",
+};
+
+string color = product[1] switch
+{
+    "BL" => "Black",
+    "MN" => "Maroon",
+    _ => "White",
+};
+
+string size = product[2] switch
+{
+    "S" => "Small",
+    "M" => "Medium",
+    "L" => "Large",
+    _ => "One Size Fits All",
+};
+
+Console.WriteLine($"Product: {size} {color} {type}");
+
+for (int i = 1; i < 21; i++)
+{
+    string rules = i switch
+    {
+        int n when n % 3 == 0 && n % 5 == 0 => " - FizzBuzz",
+        int n when n % 3 == 0 => " - Fizz",
+        int n when n % 5 == 0 => " - Buzz",
+        _ => "",
+    };
+    Console.WriteLine($"{i}{rules}");
+}
+
+int heroHealth = 10;
+int monsterHealth = 10;
+
+Random random = new();
+
+do
+{
+    int heroAttack = random.Next(1, 11);
+    monsterHealth -= heroAttack;
+
+    Console.WriteLine("Hero attacks!");
+    Console.WriteLine($"Monster took {heroAttack} damage!");
+
+    if (monsterHealth <= 0) continue;
+
+    Console.WriteLine($"Monsther have {monsterHealth}HP left");
+
+    int monsterAttack = random.Next(1, 11);
+    heroHealth -= monsterAttack;
+
+    Console.WriteLine("Monster attacks!");
+    Console.WriteLine($"Hero took {monsterAttack} damage!");
+
+    if (heroHealth <= 0) continue;
+
+    Console.WriteLine($"Hero have {heroHealth}HP left");
+
+} while (heroHealth > 0 && monsterHealth > 0);
+
+Console.WriteLine($"{(heroHealth > monsterHealth ? "Hero" : "Monster")} wins!");
 */
