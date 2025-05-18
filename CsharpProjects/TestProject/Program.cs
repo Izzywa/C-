@@ -292,4 +292,58 @@ do
 } while (heroHealth > 0 && monsterHealth > 0);
 
 Console.WriteLine($"{(heroHealth > monsterHealth ? "Hero" : "Monster")} wins!");
+
+
+Console.WriteLine("Enter a number between 5 and 10:");
+bool validEntry = int.TryParse(Console.ReadLine(), out int userInput);
+while (!validEntry || (validEntry && (userInput is < 5 or > 10)))
+{
+    if (!validEntry)
+        Console.WriteLine("Sorry, you entered an invalid number, please try again");
+    else
+        Console.WriteLine($"You entered {userInput}. Please enter a valid number between 5 and 10.");
+
+    validEntry = int.TryParse(Console.ReadLine(), out userInput);
+}
+
+Console.WriteLine($"Your input value({userInput}) has been accepted.");
+
+
+string[] userRole = ["administrator", "manager", "user"];
+string listOfValidRoles = "";
+for (int i = 0; i < userRole.ToArray().Length; i++)
+{
+    string role = userRole[i].First().ToString().ToUpper() + userRole[i][1..];
+    if (i != userRole.ToArray().Length - 1)
+    {
+        listOfValidRoles += $"{role}, ";
+    }
+    else
+    {
+        listOfValidRoles += $"or {role}";
+    }
+}
+Console.WriteLine($"Enter your role name ({listOfValidRoles})");
+
+string? userInput = Console.ReadLine();
+
+while (userInput == null || !userRole.Contains(userInput.Trim().ToLower()))
+{
+    Console.WriteLine($"The role name you entered, \"{userInput}\" is not valid. Enter your role name ({listOfValidRoles})");
+    userInput = Console.ReadLine();
+}
+
+Console.WriteLine($"Your input value ({userInput.Trim().First().ToString().ToUpper() +  userInput.Trim()[1..].ToLower()}) has been accepted.");
+
+
+string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
+
+foreach (var strings in myStrings)
+{
+    foreach (var sentence in strings.Split('.'))
+    {
+        Console.WriteLine(sentence.Trim());
+    }
+}
+
 */
