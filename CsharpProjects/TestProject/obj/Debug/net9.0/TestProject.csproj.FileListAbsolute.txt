@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/TestProject/bin/Debug/net9.0/TestProject
+/Users/izzywawa/C#/CsharpProjects/TestProject/bin/Debug/net9.0/TestProject.deps.json
+/Users/izzywawa/C#/CsharpProjects/TestProject/bin/Debug/net9.0/TestProject.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/TestProject/bin/Debug/net9.0/TestProject.dll
+/Users/izzywawa/C#/CsharpProjects/TestProject/bin/Debug/net9.0/TestProject.pdb
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.dll
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/refint/TestProject.dll
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.pdb
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/TestProject.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/TestProject/obj/Debug/net9.0/ref/TestProject.dll
