@@ -113,3 +113,62 @@ a method can be designed to return any data type
 
 **method signature** = define the number of parameters that the method will accept
 - the data type of each parameter
+
+## array
+```
+string[] fraudulentOrderIDs = new string[3]
+```
+- `new` creates new instance of an array in the computer's memory
+- `string[3]` = can hold 3 string values
+
+if try to add beyond the length of the array will get an error `System.IndexOutOfRangeException`
+
+## readable code
+best to write code that's clear and easy to understand
+
+working in a team
+- writing code that someone else will be maintaining
+
+### choose variable names that follow rules and conventions
+variable name rules
+- using underscore to start a variable name is typically reserved for private instance fields
+- must NOT be a C# keyword
+
+variable name conventions
+- use **camel case**
+- var names should be descriptive and meaningful
+- should be one or more entire words appended together (don't use contractions)
+- should't include the data type of the var
+
+the rules avove are for local variables
+- vars that is scoped within the body of the method
+- variable in a console app that uses top-level statements
+
+classes have their own associated conventions
+
+### code comments
+- when leaving a note about the intent of a passage of code
+    - describe the purpose or the thought process
+- temporarily remove code from app to try a different approach
+- adding a message like a `TODO`
+- best to use comments for higher level ideas and not to add comments about how an individual line of code works
+- low quality comments
+    - merely explain how C# or methods of the .NET library work
+    - don't provide context to the problem being solved by the code
+    - reader doesn't gain any insight into the purpose of the code as it relates to the larger system
+
+### using whitespace to improve readability
+- code blocks separated to make boundaries easier to visually discern
+- separate declaration of variables to code lines used to assign values to variables
+    - separation makes it easier to see how the variable is used in the code
+- group code lines that includes related variables
+    - draws the eyes to similarities and helps to expose the differences
+- group related statements of nested `if` statements
+    - related by purpose rather than appearance
+    - focused on the value achieved
+- `{` and `}` create code blocks
+    - should be placed on a separate line
+    - boundaries visible and readable
+- line up the code block symbols under the keyword they belong to
+    - easy to understand where the code block begins and ends
+    
