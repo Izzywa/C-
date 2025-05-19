@@ -347,3 +347,5 @@ foreach (var strings in myStrings)
 }
 
 */
+
+List<string> ourAnimals = [];

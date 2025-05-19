@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/Starter/bin/Debug/net9.0/Starter
+/Users/izzywawa/C#/CsharpProjects/Starter/bin/Debug/net9.0/Starter.deps.json
+/Users/izzywawa/C#/CsharpProjects/Starter/bin/Debug/net9.0/Starter.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/Starter/bin/Debug/net9.0/Starter.dll
+/Users/izzywawa/C#/CsharpProjects/Starter/bin/Debug/net9.0/Starter.pdb
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.dll
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/refint/Starter.dll
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.pdb
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/Starter.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/Starter/obj/Debug/net9.0/ref/Starter.dll
