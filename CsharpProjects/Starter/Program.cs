@@ -119,7 +119,7 @@ do
     switch (menuSelection)
     {
         case "1":
-            string tableFormat = "{0,-10}| {1,-5}| {2,-5}| {3,-20}| {4,-20}| {5,-5}";
+            //string tableFormat = "{0,-10}| {1,-5}| {2,-5}| {3,-20}| {4,-20}| {5,-5}";
             Console.Clear();
             Console.WriteLine("ALL PETS INFORMATION\n");
             //Console.WriteLine(tableFormat, "Species", "ID", "Age", "Physical Desc", "Personality Desc", "Nickname");
@@ -134,7 +134,80 @@ do
                 }
                 Console.WriteLine();
             }
-            
+            break;
+
+        case "2":
+            Console.Clear();
+            string anotherPet = "y";
+            int petCount = 0;
+
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (animals[i]["ID"] != "")
+                {
+                    petCount++;   
+                }
+            }
+
+            if (petCount < maxPets)
+            {
+                Console.WriteLine($"We currently have {petCount} pets that need homes. We can manage {(maxPets - petCount)} more.");
+            }
+
+            while (anotherPet == "y" && petCount < maxPets)
+            {
+                bool validEntry = false;
+
+                do
+                {
+                    Console.WriteLine("\n\rEnter 'dog' or 'cat' to begin a new entry.");
+                    readResult = Console.ReadLine();
+
+                    if (readResult != null)
+                    {
+                        animalSpecies = readResult.ToLower();
+                        animalID = animalSpecies[..1].ToUpper() + (petCount + 1).ToString();
+                    }
+
+                    validEntry = animalSpecies == "dog" || animalSpecies == "cat";
+
+                } while (validEntry == false);
+
+                do
+                {
+                    Console.WriteLine("Enter the pet's age or enter ? if unknown");
+                    readResult = Console.ReadLine();
+
+                    if (readResult != "?")
+                    {
+                        validEntry = int.TryParse(readResult, out int petAge);
+                    }
+                    
+                    animalAge = readResult ?? "";
+
+                } while (validEntry == false);
+
+                petCount++;
+
+                if (petCount < maxPets)
+                {
+                    Console.WriteLine("Do you want to enter info for another pet (y/n)");
+                    do
+                    {
+                        readResult = Console.ReadLine();
+                        if (readResult != null)
+                        {
+                            anotherPet = readResult.ToLower();
+                        }
+                    } while (anotherPet != "y" && anotherPet != "n");
+                }
+            }
+
+            if (petCount >= maxPets)
+            {
+                Console.WriteLine("We have reached the limit on the number of pets we can manage");
+            }
+
             break;
 
         default:
