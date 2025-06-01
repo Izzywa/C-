@@ -157,21 +157,22 @@ do
             while (anotherPet == "y" && petCount < maxPets)
             {
                 bool validEntry = false;
+                var newPet = animals[petCount];
+                petCount++;
 
                 do
                 {
                     Console.WriteLine("\n\rEnter 'dog' or 'cat' to begin a new entry.");
                     readResult = Console.ReadLine();
 
-                    if (readResult != null)
-                    {
-                        animalSpecies = readResult.ToLower();
-                        animalID = animalSpecies[..1].ToUpper() + (petCount + 1).ToString();
-                    }
+                    animalSpecies = string.IsNullOrEmpty(readResult) ? "" : readResult.ToLower();
 
                     validEntry = animalSpecies == "dog" || animalSpecies == "cat";
 
                 } while (validEntry == false);
+
+                newPet["Species"] = animalSpecies;
+                newPet["ID"] = animalSpecies[..1].ToUpper() + petCount.ToString();
 
                 do
                 {
@@ -182,12 +183,29 @@ do
                     {
                         validEntry = int.TryParse(readResult, out int petAge);
                     }
-                    
+
                     animalAge = readResult ?? "";
 
                 } while (validEntry == false);
 
-                petCount++;
+                newPet["Age"] = animalAge;
+
+                Console.WriteLine("Enter a physical description of the pet (size, color, gender, weight, housebroken)");
+                readResult = Console.ReadLine();
+                
+                newPet["Physical Description"] = string.IsNullOrWhiteSpace(readResult) ? "tbd" : readResult.ToLower().Trim();
+
+                Console.WriteLine("Enter a description of the pet's personality (likes or dislikes, tricks, energy level)");
+                readResult = Console.ReadLine();
+
+                newPet["Personality Description"] = string.IsNullOrWhiteSpace(readResult) ? "tbd" : readResult.ToLower().Trim();
+
+                Console.WriteLine("Enter a nickname for the pet");
+                readResult = Console.ReadLine();
+
+                newPet["Nickname"] = string.IsNullOrWhiteSpace(readResult) ? "tbd" : readResult.ToLower().Trim();
+
+
 
                 if (petCount < maxPets)
                 {
@@ -208,6 +226,78 @@ do
                 Console.WriteLine("We have reached the limit on the number of pets we can manage");
             }
 
+            break;
+
+        case "3":
+            foreach (var animal in animals)
+            {
+                if (!string.IsNullOrWhiteSpace(animal["ID"]))
+                {
+                    if (animal["Age"] == "?")
+                    {
+                        bool validAge = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter an age for ID #: {animal["ID"]}");
+                            readResult = Console.ReadLine();
+                            validAge = int.TryParse(readResult, out int age);
+                        } while (validAge == false);
+
+                        animal["Age"] = readResult ?? "?";
+                    }
+
+                    if (animal["Physical Description"] == "" || animal["Physical Description"] == "tbd")
+                    {
+                        bool validPhysicalDescription = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter a physical description for ID #: {animal["ID"]} (size, color, breed, gender, weight, housebroken)");
+                            readResult = Console.ReadLine();
+                            validPhysicalDescription = !string.IsNullOrWhiteSpace(readResult);
+                        } while (validPhysicalDescription == false);
+
+                        animal["Physical Description"] = readResult ?? "tbd";
+                    }
+                }
+            }
+            break;
+
+        case "4":
+            foreach (var animal in animals)
+            {
+                if (!string.IsNullOrWhiteSpace(animal["ID"]))
+                {
+                    if (animal["Nickname"] == "" || animal["Nickname"] == "tbd")
+                    {
+                        bool validNickname = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter a nickname for ID #: {animal["ID"]}");
+                            readResult = Console.ReadLine();
+                            validNickname = !string.IsNullOrWhiteSpace(readResult);
+
+                        } while (validNickname == false);
+
+                        animal["Nickname"] = readResult ?? "tbd";
+                    }
+
+                    if (animal["Personality Description"] == "" || animal["Personality Description"] == "tbd")
+                    {
+                        bool validPersonalityDescription = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter a personality description for ID #: {animal["ID"]} (likes or dislikes, tricks, energy level)");
+                            readResult = Console.ReadLine();
+                            validPersonalityDescription = !string.IsNullOrWhiteSpace(readResult);
+
+                        } while (validPersonalityDescription == false);
+
+                        animal["Personality Description"] = readResult ?? "tbd";
+                    }
+                }
+            }
+
+            Console.WriteLine("Nickname and personality description fields are complete for all of our friends.");
             break;
 
         default:
