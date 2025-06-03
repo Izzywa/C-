@@ -346,6 +346,172 @@ foreach (var strings in myStrings)
     }
 }
 
-*/
+Console.WriteLine("Signed integral types:");
 
-List<string> ourAnimals = [];
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}"); //for most non scientific apps, only need to work with int
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Unsigned integral types:");
+
+Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Floating point types:");
+Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+
+
+
+string[] values = ["12.3", "45", "ABC", "11", "DEF"];
+
+string message = "";
+float total = 0f;
+
+foreach (var item in values)
+{
+    bool numeric = float.TryParse(item, out var value);
+    if (numeric)
+    {
+        total += value;
+    }
+    else
+    {
+        message += item;
+    }
+}
+
+Console.WriteLine($@"Message: {message}
+Total: {total}");
+
+
+int value1 = 11;
+decimal value2 = 6.2m;
+float value3 = 4.3f;
+
+// Your code here to set result1
+// Hint: You need to round the result to nearest integer (don't just truncate)
+decimal result1 = value1 / value2;
+Console.WriteLine($"Divide value1 by value2, display the result as an int: {Convert.ToInt32(result1)}");
+
+// Your code here to set result2
+decimal result2 = value2 / (decimal)value3;
+Console.WriteLine($"Divide value2 by value3, display the result as a decimal: {result2}");
+
+// Your code here to set result3
+float result3 = value3 / (float)value1;
+Console.WriteLine($"Divide value3 by value1, display the result as a float: {result3}");
+
+
+string pangram = "The quick brown fox jumps over the lazy dog";
+string[] words = pangram.Split(' ');
+
+List<string> reversed = [];
+
+foreach (var word in words)
+{
+    char[] characters = word.ToCharArray();
+    Array.Reverse(characters);
+    reversed.Add(String.Join("", characters));
+}
+
+string result = String.Join(" ", reversed);
+Console.WriteLine(result);
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] orders = orderStream.Split(",");
+Array.Sort(orders);
+
+foreach (var order in orders)
+{
+    if (order.Length == 4)
+    {
+        Console.WriteLine(order);
+    }
+    else
+    {
+        Console.WriteLine("{0,-5} -Error", order);
+    }
+}
+
+int invoiceNumber = 1201;
+decimal productShares = 25.4568m;
+decimal subtotal = 2750.00m;
+decimal taxPercentage = .15825m;
+decimal total = 3185.19m;
+
+Console.WriteLine("{0,14}: {1}","Invoice Number",invoiceNumber);
+Console.WriteLine("{0,14}: {1:N3} Product", "Shares", productShares);
+Console.WriteLine("{0,14}: {1:C2}", "Sub Total", subtotal);
+Console.WriteLine("{0,14}: {1:P2}", "Tax", taxPercentage);
+Console.WriteLine("{0,14}: {1:C}", "Total Billed", total);
+
+string customerName = "Ms. Barros";
+
+string currentProduct = "Magic Yield";
+int currentShares = 2975000;
+decimal currentReturn = 0.1275m;
+decimal currentProfit = 55000000.0m;
+
+string newProduct = "Glorious Future";
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+
+// Your logic here
+
+string comparisonMessage = "";
+comparisonMessage += String.Format(@"Dear {0},
+As a customer of our {1} offering we are excited to tell you about a new financial product that would dramatically increase your return.
+
+Currently, you own {2:N2} shares at a return of {3:P2}.
+
+Our new product, {4} offers a return of {5:P2}. Given your current volume, your potential profit would be {6:C2}.
+
+Here's a quick comparison:
+
+{1,-20} {3,-10:P2} {7:C2}
+{4,-20} {5,-10:P2} {6:C2}",
+customerName, currentProduct, currentShares, currentReturn,
+newProduct, newReturn, newProfit, currentProfit);
+
+// Your logic here
+
+Console.WriteLine(comparisonMessage);
+
+
+string message = "Find what is <span>inside the parentheses</span>";
+
+string openspan = "<span>";
+string closingSpan = "</span>";
+
+int openingPosition = message.IndexOf(openspan);
+int closingPosition = message.IndexOf(closingSpan);
+
+openingPosition += openspan.Length;
+int length = closingPosition - openingPosition;
+Console.WriteLine(message.Substring(openingPosition, length));
+
+const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string span = "span>";
+int openingSpan = input.IndexOf(span);
+int closingSpan = input.LastIndexOf("</"+span);
+string quantity = input[(openingSpan + span.Length)..closingSpan];
+
+
+string div = "div>";
+int openingDiv = input.IndexOf(div);
+int closingDiv = input.LastIndexOf("</" + div);
+string output = input[(openingDiv + div.Length)..closingDiv].Replace("&trade", "&reg");
+
+// Your work here
+
+Console.WriteLine($"Quantity: {quantity}");
+Console.WriteLine($"Output: {output}");
+*/
