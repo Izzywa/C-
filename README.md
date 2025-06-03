@@ -193,3 +193,47 @@ conventions:
 - might continue to iterate based on a boolean expression
 
 `while` statement evaluates a boolean expression first
+
+# floating point types
+- `float` and `double` stores values as binary
+    - useful because large numbers can be stored using a small memory footpirnt
+    - should only be used when an approximation is useful
+    - math on binary floating point math is an approximation of the real value
+
+- `decimal` stored in decimal (base 10) format
+    - when need a more precise answer
+    - large memory footprint
+    - used when working with financial data or any scenario where you need an accurate result from a calculation
+
+**E notation**
+- times 10 raised to the power of
+- `5E+2` = 5 * 10^2 = 500
+
+# reference types
+```
+int[] data;
+```
+- at this point, `data` is merely a variable that could hold a reference to a value in the heap
+- it is a _null reference_ because not pointing to a memory address
+
+```
+data = new int[3];
+```
+- create an instance of `int` array using the `new` keyword
+- `new` informs .NET Runtime to create an instance of `int` array
+- coordinate to stroe the array sized for 3 int values in memory
+- the .NET Runtime returns a memory address of the new `int` array
+- the memory address is then stored in the variable
+- default value for `int` = 0 => the `int` array's elements default to the value `0`
+
+# changing data types
+`Convert` class is best for converting fractuinal numbers into whole numbers because it rounds up the way you would expect
+- casting `(int)1.5m` truncates into 1
+- converting `Convert.ToInt32(1.5m)` rounds up to 2
+
+to convert int to string, use `TryParse()` when possible
+
+`TryParse()`
+- attempts to parse a string into a given numeric data type
+- if successful, stores the converted value in an out parameter
+- returns a `bool` to indicate whether the action succeded or failed

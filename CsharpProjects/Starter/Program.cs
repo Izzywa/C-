@@ -229,6 +229,8 @@ do
             break;
 
         case "3":
+            Console.Clear();
+
             foreach (var animal in animals)
             {
                 if (!string.IsNullOrWhiteSpace(animal["ID"]))
@@ -260,9 +262,12 @@ do
                     }
                 }
             }
+            Console.WriteLine("Age and physical description fields are complete for all of our friends. ");
             break;
 
         case "4":
+            Console.Clear();
+            
             foreach (var animal in animals)
             {
                 if (!string.IsNullOrWhiteSpace(animal["ID"]))
