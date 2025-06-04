@@ -5,6 +5,7 @@ string animalAge = "";
 string animalPhysicalDescription = "";
 string animalPersonalityDescription = "";
 string animalNickname = "";
+string suggestedDonation = "";
 
 // variables that support data entry
 int maxPets = 8;
@@ -30,6 +31,7 @@ for (int i = 0; i < maxPets; i++)
             animalPhysicalDescription = "medium sized cream colored female golden retriever weighing about 65 pounds. housebroken.";
             animalPersonalityDescription = "loves to have her belly rubbed and likes to chase her tail. gives lots of kisses.";
             animalNickname = "lola";
+            suggestedDonation = "85.00";
             break;
 
         case 1:
@@ -39,6 +41,7 @@ for (int i = 0; i < maxPets; i++)
             animalPhysicalDescription = "large reddish-brown male golden retriever weighing about 85 pounds. housebroken.";
             animalPersonalityDescription = "loves to have his ears rubbed when he greets you at the door, or at any time! loves to lean-in and give doggy hugs.";
             animalNickname = "loki";
+            suggestedDonation = "49.99";
             break;
 
         case 2:
@@ -48,6 +51,7 @@ for (int i = 0; i < maxPets; i++)
             animalPhysicalDescription = "small white female weighing about 8 pounds. litter box trained.";
             animalPersonalityDescription = "friendly";
             animalNickname = "Puss";
+            suggestedDonation = "40.00";
             break;
 
         case 3:
@@ -57,6 +61,7 @@ for (int i = 0; i < maxPets; i++)
             animalPhysicalDescription = "";
             animalPersonalityDescription = "";
             animalNickname = "";
+            suggestedDonation = "";
             break;
 
         default:
@@ -66,6 +71,7 @@ for (int i = 0; i < maxPets; i++)
             animalPhysicalDescription = "";
             animalPersonalityDescription = "";
             animalNickname = "";
+            suggestedDonation = "";
             break;
     }
 
@@ -83,7 +89,8 @@ for (int i = 0; i < maxPets; i++)
         { "Age", animalAge},
         { "Nickname", animalNickname},
         { "Physical Description", animalPhysicalDescription},
-        { "Personality Description", animalPersonalityDescription}
+        { "Personality Description", animalPersonalityDescription},
+        { "Suggested Donation", suggestedDonation}
     }];
 }
 
@@ -124,15 +131,29 @@ do
             Console.WriteLine("ALL PETS INFORMATION\n");
             //Console.WriteLine(tableFormat, "Species", "ID", "Age", "Physical Desc", "Personality Desc", "Nickname");
 
-
+            decimal decimalDonation = 0.00m;
             foreach (var animal in animals)
             {
-                //Console.WriteLine(tableFormat, animal["Species"], animal["ID"], animal["Age"], animal["Physical"], animal["Personality"], animal["Nickname"]);
-                foreach (var item in animal)
+                if (animal["ID"] != "")
                 {
-                    Console.WriteLine($"{item.Key}: {item.Value}");
+                    foreach (var item in animal)
+                    {
+                        if (item.Key == "Suggested Donation")
+                        {
+                            if (!decimal.TryParse(item.Value, out decimalDonation))
+                            {
+                                decimalDonation = 45.00m;
+                            }
+
+                            Console.WriteLine($"{item.Key}: {decimalDonation:C2}");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{item.Key}: {item.Value}");
+                        }
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
             }
             break;
 
@@ -303,6 +324,53 @@ do
             }
 
             Console.WriteLine("Nickname and personality description fields are complete for all of our friends.");
+            break;
+
+        case "8":
+            Console.Clear();
+            string dogCharacteristic = "";
+
+            while (dogCharacteristic == "")
+            {
+                Console.WriteLine($"\nEnter one desired dog characteristics to search for");
+                readResult = Console.ReadLine();
+                dogCharacteristic = string.IsNullOrEmpty(readResult) ? "" : readResult.ToLower().Trim();
+            }
+
+            bool noMatchesDog = true;
+            string[] searchingIcons = [".", "..", "..."];
+
+            foreach (var animal in animals)
+            {
+                if (animal["Species"] == "dog")
+                {
+                    for (int j = 5; j > -1 ; j--)
+                    {
+                    // #5 update "searching" message to show countdown 
+                        foreach (string icon in searchingIcons)
+                        {
+                            Console.Write($"\rsearching our dog {animal["Nickname"]} for {dogCharacteristic} {icon}");
+                            Thread.Sleep(250);
+                        }
+                        
+                        Console.Write($"\r{new String(' ', Console.BufferWidth)}");
+                    }
+
+                    if (animal["Physical Description"].Contains(dogCharacteristic))
+                    {
+                        Console.WriteLine($"\nOur dog {animal["Nickname"]} is a match!");
+                        Console.WriteLine(animal["Physical Description"]);
+
+                        noMatchesDog = false;
+                    }
+                }
+            }
+
+            if (noMatchesDog)
+            {
+                Console.WriteLine($"None of our dogs are a match found for {dogCharacteristic}");
+            }
+
             break;
 
         default:
