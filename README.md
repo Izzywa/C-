@@ -237,3 +237,22 @@ to convert int to string, use `TryParse()` when possible
 - attempts to parse a string into a given numeric data type
 - if successful, stores the converted value in an out parameter
 - returns a `bool` to indicate whether the action succeded or failed
+
+
+# reusable methods
+- remove duplicatrs
+- shortening code
+- improve readability
+
+# method scope
+variables declared inside a code block are only accessible within that region
+
+top level statements
+- statements declared outside any code block
+- global variables
+- not restricted to any scope
+- can be used anywhere throughout the program
+- useful for different methods that need to access the same dta
+
+need to pay attention to variable names
+
