@@ -689,4 +689,153 @@ void DisplayAdjustedTimes(int[] times, int currentGMT, int newGMT)
     }
     
 }
+
+using System.Reflection.Metadata;
+
+string[] guestList = {"Rebecca", "Nadia", "Noor", "Jonte"};
+string[] rsvps = new string[10];
+int count = 0;
+RSVP("Rebecca");
+RSVP("Nadia", 2, "Nuts");
+RSVP(name: "Linh", partySize: 2, inviteOnly: false);
+RSVP("Tony", allergies: "Jackfruit");
+RSVP("Noor", 4, inviteOnly: false);
+RSVP("Jonte", 2, "Stone fruit", false);
+ShowRSVPs();
+
+void RSVP(string name, int partySize = 1, string allergies = "none", bool inviteOnly = true) 
+{
+    if (inviteOnly)
+    {
+        // search guestList before adding rsvp
+        bool found = false;
+        foreach (string guest in guestList)
+        {
+            if (guest.Equals(name))
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine($"Sorry, {name} is not on the guest list");
+            return;
+        }
+    }
+
+    rsvps[count] = $"Name: {name}, \tParty Size: {partySize}, \tAllergies: {allergies}";
+    count++;
+}
+
+void ShowRSVPs()
+{
+    Console.WriteLine("\nTotal RSVPs:");
+    for (int i = 0; i < count; i++)
+    {
+        Console.WriteLine(rsvps[i]);
+    }
+}
+
+string[,] corporate = 
+{
+    {"Robert", "Bavin"}, {"Simon", "Bright"},
+    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external = 
+{
+    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+
+string externalDomain = "hayworth.com";
+
+for (int i = 0; i < corporate.GetLength(0); i++)
+{
+    // display internal email addresses
+    DisplayEmailAddress(corporate[i, 0], corporate[i, 1]);
+}
+
+for (int i = 0; i < external.GetLength(0); i++)
+{
+    // display external email addresses
+    DisplayEmailAddress(external[i, 0], external[i, 1], externalDomain);
+}
+
+void DisplayEmailAddress(string first, string last, string domainName = "contoso.com")
+{
+    Console.WriteLine("{0}{1}@{2}",
+        first.ToLower()[..2], last.ToLower(), domainName
+    );
+}
+
+
+string givenWord = "Something";
+Console.WriteLine(ReverseWord(givenWord));
+
+string givenSentence = "Some random sentence";
+foreach (var word in givenSentence.Split(' '))
+{
+    Console.Write($"{ReverseWord(word)} ");
+}
+
+string[] words = {"racecar" ,"talented", "deified", "tent", "tenet"};
+
+Console.WriteLine("Is it a palindrome?");
+foreach (string word in words)
+{
+    Console.WriteLine($"{word}: {IsPalindrome(word)}");
+}
+
+bool IsPalindrome(string word)
+{
+    return word == ReverseWord(word);
+}
+
+string ReverseWord(string word)
+{
+    string result = "";
+    for (int i = word.Length; i > 0; i--)
+    {
+        result += word[i - 1];
+    }
+    return result;
+}
+
+int target = 80;
+int[] coins = [5, 5, 50, 25, 25, 10, 5];
+List<(int, int)> result = TwoCoins(coins, target);
+
+if (result.Count == 0)
+{
+    Console.WriteLine("No two coins make change");
+}
+else
+{
+    Console.WriteLine("Change found at position:");
+    foreach (var coinsIndex in result)
+    {
+        Console.WriteLine($"{coinsIndex.Item1},{coinsIndex.Item2}");
+    }
+}
+
+static List<(int, int)> TwoCoins (int[] coins, int target)
+{
+    List<(int, int)> result = [];
+
+    for (int i = 0; i < coins.Length; i++)
+    {
+        for (int j = i + 1; j < coins.Length; j++)
+        {
+            if (coins[i] + coins[j] == target)
+            {
+                result = [..result, (i, j)];
+            }
+        }
+    }
+    return result;
+}
 */
