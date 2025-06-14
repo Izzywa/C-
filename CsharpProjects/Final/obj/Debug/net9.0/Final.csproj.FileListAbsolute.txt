@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/Final/bin/Debug/net9.0/Final
+/Users/izzywawa/C#/CsharpProjects/Final/bin/Debug/net9.0/Final.deps.json
+/Users/izzywawa/C#/CsharpProjects/Final/bin/Debug/net9.0/Final.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/Final/bin/Debug/net9.0/Final.dll
+/Users/izzywawa/C#/CsharpProjects/Final/bin/Debug/net9.0/Final.pdb
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.dll
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/refint/Final.dll
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.pdb
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/Final.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/Final/obj/Debug/net9.0/ref/Final.dll

@@ -256,3 +256,113 @@ top level statements
 
 need to pay attention to variable names
 
+# debug
+## sln file
+`.sln` file is a solution file 
+- used by Visual Studo to manage projects
+- usually created automatically when you create a mew project in visual studio code
+- the .sln file is used by the debugger to identify the project that should be run in the debug environment
+
+Command Palette
+- select .NET: Generate Assets for Build and Debug
+- create `.vscode` folder
+
+.vscode > launch.json
+
+# exception handling 
+```
+try
+{   
+   // try code block - code that may generate an exception
+}
+catch
+{   
+   // catch code block - code to handle an exception
+}
+finally
+{   
+   // finally code block - code to clean up resources
+}
+```
+
+exceptions are represented as objects
+- an instance of a class
+
+Although they are sometimes used interchangeably, a class and an object are different things. A class defines a type of object, but it's not an object itself. An object is a concrete entity based on a class.
+
+# creating an exception object
+generating an exception in response to a specific condition, issue, or error = stability of app
+
+exception type = depends on the coding issue
+- should mathc the intended purpose of the exception as closely as possible
+- common exception types
+    - `ArgumentException` or `ArgumentNullException`
+        - used when a mthod or constructor is called with an invalid argument value or null reference
+    - `InvalidOperationException`
+        - used when operating conditions of a method don't support the successful completion of a particular method call
+    - `NotSupportedException`
+        - used when an operation or feature is not supported
+    - `IOException`
+        - used when an input/output operation fails
+    - `FormatException`
+        - used when the format of a string or data is incorrect
+
+```
+ArgumentException invalidArgumentException = new ArgumentException();
+```
+
+## configure and throw customized exceptions
+throwing an exception object 
+- creating an instance of an exception-derived class
+- configuring properties of the exception
+- throwing the object by using the `throw` keyword
+
+helpful to customize an exception with contextual information before it's thrown
+- can provide app with information within an exception object 
+```
+ArgumentException invalidArgumentException = new ArgumentException("ArgumentException: The 'GraphData' method received data outside the expected range");
+throw invalidArgumentException;
+```
+- the code creates an exception object with a custom `Message` property.
+- the `Message` property of an exception is readonly = custom `Message` property must be set when instantiating the object
+- provide clear error message
+- can include additional infromation:
+    - stack traces
+    - error codes
+
+- `Message` property:
+    - explain the reason for the exception
+    - no sensitive data
+- `StackTrace` property:
+    - track origin of the exception
+    - name of method on the current call stack
+    - file name
+    - line number 
+    - created automatically by the CLR (common language runtime) from the point of `throw` statement
+        - exceptions must be thrown from the point where the stack trace should begin
+
+## when to throw an exception
+methods throw exception when can't complete their intended purpose
+- exception thrown should be based on the most specific exception available that fits the error conditions
+
+## re-throwing exceptions
+re-throw an exception from inside a `catch` code block
+- `throw` does not take exception operand.
+- the original exception object is used
+
+
+don't use exceptions to change the flow of a program as part of ordinary execution
+- use exceptions to report and handle error conditions
+
+# `Debug.Assert`
+tool for cathcing logic errors during development
+- only works in debug builds
+- can be used to check for condition that should never occur
+- takes in 2 parameters
+    - boolean condition to check
+    - optional string message to display if the condition is `false`
+
+- should not be used in place of throwing an exception
+
+`Debug.Assert` = errors that should never occur
+exceptions = handle errors that could occur during normal execution of your program

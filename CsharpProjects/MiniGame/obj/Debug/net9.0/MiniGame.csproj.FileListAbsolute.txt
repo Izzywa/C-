@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/MiniGame/bin/Debug/net9.0/MiniGame
+/Users/izzywawa/C#/CsharpProjects/MiniGame/bin/Debug/net9.0/MiniGame.deps.json
+/Users/izzywawa/C#/CsharpProjects/MiniGame/bin/Debug/net9.0/MiniGame.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/MiniGame/bin/Debug/net9.0/MiniGame.dll
+/Users/izzywawa/C#/CsharpProjects/MiniGame/bin/Debug/net9.0/MiniGame.pdb
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.dll
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/refint/MiniGame.dll
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.pdb
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/MiniGame.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/MiniGame/obj/Debug/net9.0/ref/MiniGame.dll

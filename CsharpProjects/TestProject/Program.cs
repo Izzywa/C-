@@ -839,3 +839,41 @@ static List<(int, int)> TwoCoins (int[] coins, int target)
     return result;
 }
 */
+
+// target number: random number between 1-5
+// player roll 6 sided dice
+// check if roll greater than target number
+// ask player if they want to terminate again
+
+if (ShouldPlay("Would you like to play? (Y/N)"))
+{
+    do
+    {
+        PlayGame();
+    } while (ShouldPlay("Play again? (Y/N)"));
+}
+
+static bool ShouldPlay(string prompt)
+    {
+        string? result;
+        do
+        {
+            Console.WriteLine(prompt);
+            result = Console.ReadLine();
+
+        } while (result != "Y" && result != "N");
+
+        return result == "Y";
+    }
+
+static void PlayGame()
+{
+    Random random = new();
+    int target = random.Next(1, 6);
+    int roll = random.Next(1, 7);
+    string win = roll > target ? "win" : "lose";
+
+    Console.WriteLine($"Roll a number greateer than {target} to win!");
+    Console.WriteLine($"You rolled a {roll}");
+    Console.WriteLine($"You {win}!\n");
+}

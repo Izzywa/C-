@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/bin/Debug/net9.0/PettingZoo
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/bin/Debug/net9.0/PettingZoo.deps.json
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/bin/Debug/net9.0/PettingZoo.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/bin/Debug/net9.0/PettingZoo.dll
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/bin/Debug/net9.0/PettingZoo.pdb
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.dll
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/refint/PettingZoo.dll
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.pdb
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/PettingZoo.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/PettingZoo/obj/Debug/net9.0/ref/PettingZoo.dll

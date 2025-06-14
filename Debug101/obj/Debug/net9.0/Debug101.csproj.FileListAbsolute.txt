@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/Debug101/bin/Debug/net9.0/Debug101
+/Users/izzywawa/C#/Debug101/bin/Debug/net9.0/Debug101.deps.json
+/Users/izzywawa/C#/Debug101/bin/Debug/net9.0/Debug101.runtimeconfig.json
+/Users/izzywawa/C#/Debug101/bin/Debug/net9.0/Debug101.dll
+/Users/izzywawa/C#/Debug101/bin/Debug/net9.0/Debug101.pdb
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.AssemblyInfo.cs
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.sourcelink.json
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.dll
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/refint/Debug101.dll
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.pdb
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/Debug101.genruntimeconfig.cache
+/Users/izzywawa/C#/Debug101/obj/Debug/net9.0/ref/Debug101.dll
