@@ -1,0 +1,15 @@
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/bin/Debug/net9.0/ThrowExceptions101
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/bin/Debug/net9.0/ThrowExceptions101.deps.json
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/bin/Debug/net9.0/ThrowExceptions101.runtimeconfig.json
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/bin/Debug/net9.0/ThrowExceptions101.dll
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/bin/Debug/net9.0/ThrowExceptions101.pdb
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.GeneratedMSBuildEditorConfig.editorconfig
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.AssemblyInfoInputs.cache
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.AssemblyInfo.cs
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.csproj.CoreCompileInputs.cache
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.sourcelink.json
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.dll
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/refint/ThrowExceptions101.dll
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.pdb
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ThrowExceptions101.genruntimeconfig.cache
+/Users/izzywawa/C#/CsharpProjects/ThrowExceptions101/obj/Debug/net9.0/ref/ThrowExceptions101.dll
